@@ -25,9 +25,6 @@ SELECT * FROM join_room WHERE room_name = "room1" AND user_name = "A";
 #JoinRoom
 INSERT INTO join_room(user_name,room_name) VALUES ("A","room1");
 
-#checkMemberInRoom
-SELECT * FROM join_room WHERE user_name = "A" and room_name = "room1";
-
 #leaveRoom
 DELETE FROM join_room WHERE user_name = "A" AND room_name = "room1";
 

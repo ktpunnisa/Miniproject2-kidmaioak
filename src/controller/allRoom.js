@@ -29,7 +29,7 @@ exports.addRoomIfNotExist = async (req, res) => {
     }
 }
 
-exports.deleteRoom = async (req, res) => {
+exports.removeRoom = async (req, res) => {
     const hasRoom = await allRoomModel.hasRoom(req.body.id)
     if(hasRoom){
         const result = await allRoomModel.deleteRoom(req.body.id)

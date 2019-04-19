@@ -13,10 +13,13 @@ router.use(bodyParser.urlencoded({ extended: true }))
 router.get('/allRooms', allRoomController.getRoomList)
 router.post('/allRooms', allRoomController.addNewRoom)
 router.put('/allRooms', allRoomController.addRoomIfNotExist)
-router.delete('/allRooms', allRoomController.deleteRoom)
+router.delete('/allRooms', allRoomController.removeRoom)
 
 //room
 router.get('/room/:id', roomController.getRoomMember)
+router.post('/room/:id', roomController.joinRoom)
+router.put('/room/:id', roomController.joinRoom)
+router.delete('/room/:id', roomController.leaveRoom)
 
 //users
 router.get('/users', userController.getUser)
