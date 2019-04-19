@@ -7,7 +7,9 @@ exports.getRoomList = async () => {
     try {
         const result = await con.query("SELECT room_id FROM room")
         con.release()
-        return result
+        return result.map(function(res) {
+            return res.room_id
+        });
     } catch (error) {
         throw "Cannot get room list"
     }

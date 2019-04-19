@@ -7,7 +7,9 @@ exports.getRoomMember = async (room_id) => {
     try {
         const result = await con.query("SELECT user_name FROM join_room WHERE room_id = ?", [room_id])
         con.release()
-        return result
+        return result.map(function(res) {
+            return res.user_name
+        });
     } catch (error) {
         throw "Cannot get members in this room"
     }
