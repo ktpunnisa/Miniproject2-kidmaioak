@@ -6,6 +6,6 @@ const app = express()
 
 app.use(router)
 
-app.listen(port, () => {
+app.listen(port_server1, () => {
     console.log("server is running at port", port_server1)
 })
