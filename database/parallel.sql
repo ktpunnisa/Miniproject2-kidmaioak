@@ -6,6 +6,6 @@ create table room(
     );
 create table join_room(
 	user_name varchar(30),
-    room_id varchar(30) references chat_room(room_id),
+    room_id varchar(30) references room(room_id),
     primary key (user_name,room_id)
     );
