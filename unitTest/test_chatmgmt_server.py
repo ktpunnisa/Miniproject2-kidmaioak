@@ -10,8 +10,8 @@ import pytest
 
 # configuration for the location of test servers
 servers = [
-    'http://localhost:8080',
-    'http://localhost:8081'
+    'http://localhost:5000',
+    'http://localhost:6000'
 ]
 
 class ChatMgmtClient:
